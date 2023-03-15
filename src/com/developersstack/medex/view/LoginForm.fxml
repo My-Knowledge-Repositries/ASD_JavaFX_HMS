@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="508.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developersstack.medex.controller.LoginFormController">
+<AnchorPane fx:id="loginContext" prefHeight="508.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developersstack.medex.controller.LoginFormController">
    <children>
       <AnchorPane layoutX="-5.0" layoutY="-1.0" prefHeight="508.0" prefWidth="461.0">
          <children>
@@ -56,7 +56,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Label layoutX="227.0" layoutY="369.0" text="OR" textFill="#fc0000">
+            <Label layoutX="224.0" layoutY="369.0" text="OR" textFill="#fc0000">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
