@@ -43,7 +43,7 @@
                   <ToggleGroup fx:id="accountType" />
                </toggleGroup>
             </JFXRadioButton>
-            <JFXRadioButton layoutX="232.0" layoutY="261.0" selected="true" text="Patient" toggleGroup="$accountType">
+            <JFXRadioButton layoutX="232.0" layoutY="261.0" text="Patient" toggleGroup="$accountType">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
@@ -56,7 +56,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Label layoutX="227.0" layoutY="369.0" text="OR" textFill="#fc0000">
+            <Label layoutX="224.0" layoutY="369.0" text="OR" textFill="#fc0000">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
