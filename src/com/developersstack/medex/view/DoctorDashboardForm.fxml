@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane fx:id="doctorDashboardContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developersstack.medex.controller.DoctorDashboardFormController">
-
+<AnchorPane fx:id="doctorDashboardContext" prefHeight="619.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developersstack.medex.controller.DoctorDashboardFormController">
+   <children>
+      <Label layoutX="16.0" layoutY="11.0" text="Doctor Dashboard" textFill="#ff6600">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="4.0" layoutY="44.0" prefHeight="0.0" prefWidth="902.0" />
+      <Label fx:id="lblDate" layoutX="283.0" layoutY="9.0" text="2022-10-12">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="416.0" layoutY="9.0" text="08:10:12">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="394.0" layoutY="9.0" orientation="VERTICAL" prefHeight="28.0" prefWidth="1.0" />
+      <JFXButton buttonType="RAISED" layoutX="829.0" layoutY="8.0" style="-fx-background-color: #012E6A;" text="Log Out" textFill="WHITE" />
+   </children>
 </AnchorPane>

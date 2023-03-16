@@ -10,8 +10,10 @@ public class Database {
 
     static {
         //--------
-        userTable.add(new UserDto("Hasika","Sadaruwan","hasika@gmail.com","1234", AccountType.PATIENT));
-        userTable.add(new UserDto("Imesh","hirushan","imeHiru@gmail.com","1234", AccountType.DOCTOR));
+        userTable.add(new UserDto("Hasika","Sandaruwan",
+                "hasika@gmail.com","1234", AccountType.PATIENT));
+        userTable.add(new UserDto("shashika","nirmal",
+                "shashika@gmail.com","1234", AccountType.DOCTOR));
         //--------
     }
 }
