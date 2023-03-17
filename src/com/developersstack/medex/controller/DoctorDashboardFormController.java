@@ -6,6 +6,7 @@ import com.developersstack.medex.util.Cookie;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -42,7 +43,7 @@ public class DoctorDashboardFormController {
 
         // time
         Timeline timeline = new Timeline(
-                new KeyFrame(Duration.seconds(0),e->{
+                new KeyFrame(Duration.seconds(0), e -> {
                     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("hh:mm:ss");
                     lblTime.setText(LocalTime.now().format(dtf));
                 }),
@@ -75,12 +76,16 @@ public class DoctorDashboardFormController {
             setUi("LoginForm");
         }
     }
+
     private void setUi(String location) throws IOException {
         Stage stage = (Stage) doctorDashboardContext.getScene().getWindow();
         stage.setScene(new Scene(FXMLLoader.
-                load(getClass().getResource("../view/"+location+".fxml"))));
+                load(getClass().getResource("../view/" + location + ".fxml"))));
         stage.centerOnScreen();
     }
 
 
+    public void navigateToPatientManagementForm(ActionEvent actionEvent) throws IOException {
+        setUi("PatientManagementForm");
+    }
 }
