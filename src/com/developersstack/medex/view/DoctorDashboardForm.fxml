@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="doctorDashboardContext" prefHeight="619.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developersstack.medex.controller.DoctorDashboardFormController">
    <children>
       <Label layoutX="16.0" layoutY="11.0" text="Doctor Dashboard" textFill="#ff6600">
