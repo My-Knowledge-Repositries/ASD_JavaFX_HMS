@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="499.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developersstack.medex.controller.PatientManagementFormController">
+<AnchorPane fx:id="patientContext" prefHeight="499.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developersstack.medex.controller.PatientManagementFormController">
    <children>
       <Label layoutX="75.0" layoutY="20.0" text="Patient Management" textFill="#ff6600">
          <font>
@@ -18,19 +18,19 @@
          </font>
       </Label>
       <Separator layoutX="26.0" layoutY="54.0" prefHeight="0.0" prefWidth="902.0" />
-      <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="19.0" style="-fx-background-color: #012E6A;" text="&lt;-" textFill="WHITE" />
-      <TableView layoutX="26.0" layoutY="116.0" prefHeight="347.0" prefWidth="965.0">
+      <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="19.0" onAction="#backToHomeOnAction" style="-fx-background-color: #012E6A;" text="&lt;-" textFill="WHITE" />
+      <TableView fx:id="tblPatient" layoutX="26.0" layoutY="116.0" prefHeight="347.0" prefWidth="965.0">
         <columns>
-          <TableColumn prefWidth="117.0" text="NIC" />
-          <TableColumn prefWidth="147.0" text="First Name" />
-            <TableColumn prefWidth="131.0" text="Last Name" />
-            <TableColumn prefWidth="131.0" text="DOB" />
-            <TableColumn prefWidth="102.0" text="Gender" />
-            <TableColumn prefWidth="142.0" text="Address" />
-            <TableColumn prefWidth="83.0" text="Age" />
-            <TableColumn prefWidth="111.0" text="Email" />
+          <TableColumn fx:id="colNic" prefWidth="117.0" text="NIC" />
+          <TableColumn fx:id="colFirstName" prefWidth="147.0" text="First Name" />
+            <TableColumn fx:id="colLastName" prefWidth="131.0" text="Last Name" />
+            <TableColumn fx:id="colDob" prefWidth="131.0" text="DOB" />
+            <TableColumn fx:id="colGender" prefWidth="102.0" text="Gender" />
+            <TableColumn fx:id="colAddress" prefWidth="142.0" text="Address" />
+            <TableColumn fx:id="colAge" prefWidth="83.0" text="Age" />
+            <TableColumn fx:id="colEmail" prefWidth="111.0" text="Email" />
         </columns>
       </TableView>
-      <JFXTextField layoutX="26.0" layoutY="66.0" prefHeight="31.0" prefWidth="319.0" promptText="Search Here" />
+      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="26.0" layoutY="66.0" prefHeight="31.0" prefWidth="319.0" promptText="Search Here" />
    </children>
 </AnchorPane>
