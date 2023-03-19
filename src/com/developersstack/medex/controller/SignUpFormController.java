@@ -1,7 +1,7 @@
 package com.developersstack.medex.controller;
 
 import com.developersstack.medex.db.Database;
-import com.developersstack.medex.dto.UserDto;
+import com.developersstack.medex.dto.User;
 import com.developersstack.medex.enums.AccountType;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXRadioButton;
@@ -35,16 +35,17 @@ public class SignUpFormController {
         }*/
 
         /*Second Method*/
-        Optional<UserDto> selectedUser = Database.userTable.stream().filter(e -> e.getEmail().equals(email)).findFirst();
+        Optional<User> selectedUser = Database.userTable.stream().filter(e -> e.getEmail().equals(email)).findFirst();
         if (selectedUser.isPresent()) {
             new Alert(Alert.AlertType.WARNING, "Email is already exists!").show();
             return;
         }
         Database.userTable.add(
-                new UserDto(txtFirstName.getText(), txtLastName.getText(), email, txtPassword.getText(), rBtnDoctor.isSelected() ? AccountType.DOCTOR : AccountType.PATIENT)
+                new User(txtFirstName.getText(), txtLastName.getText(), email, txtPassword.getText(), rBtnDoctor.isSelected() ? AccountType.DOCTOR : AccountType.PATIENT)
         );
         new Alert(Alert.AlertType.CONFIRMATION, "Welcome").show();
         setUi();
+        // driver load =>
     }
 
     public void alreadyHaveAnAccountOnAction(ActionEvent actionEvent) throws IOException {

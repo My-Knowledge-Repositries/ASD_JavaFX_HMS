@@ -2,7 +2,7 @@ package com.developersstack.medex.controller;
 
 import com.developersstack.medex.db.Database;
 import com.developersstack.medex.dto.DoctorDto;
-import com.developersstack.medex.dto.UserDto;
+import com.developersstack.medex.dto.User;
 import com.developersstack.medex.enums.GenderType;
 import com.developersstack.medex.util.Cookie;
 import com.jfoenix.controls.JFXRadioButton;
@@ -28,7 +28,7 @@ public class DoctorRegistrationFormController {
     }
 
     private void loadUserData() {
-        UserDto selectedUser = Cookie.selectedUser;
+        User selectedUser = Cookie.selectedUser;
         txtFirstName.setText(selectedUser.getFirstName());
         txtLastName.setText(selectedUser.getLastName());
         txtEmail.setText(selectedUser.getEmail());
